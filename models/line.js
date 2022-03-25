@@ -20,6 +20,12 @@ const lineSchema = new mongoose.Schema({
     City: String,
     State: String,
     Zip: String,
-   }]
+    }]
   }]
 })
+
+const Line = mongoose.model("Line", lineSchema)
+
+export{
+  Line
+}

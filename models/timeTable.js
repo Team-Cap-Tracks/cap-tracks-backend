@@ -7,4 +7,5 @@ const timeTableSchema = Schema({
     dayOfWeek: String,
     firstTrain: Date,
     lastTrain: Date,
+    startStation: String,
 })

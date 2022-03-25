@@ -10,6 +10,12 @@ const ticketSchema = new mongoose.Schema({
   time: {type: Date, required: true},
 }, {
   timestamps: true,
+    
+const favoriteRoutesSchema = new mongoose.Schema({
+  routeName: String,
+  routeOwner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},
+  startStation: String,
+  endStation: String,
 })
 
 const userSchema = new mongoose.Schema({
@@ -18,6 +24,7 @@ const userSchema = new mongoose.Schema({
   password: String,
   profile: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   tickets: [ticketSchema],
+  favoriteRoutes: [favoriteRoutesSchema]
 }, {
   timestamps: true,
 })
@@ -47,5 +54,6 @@ userSchema.methods.comparePassword = function (tryPassword, cb) {
 }
 
 const User = mongoose.model('User', userSchema)
+const Routes = mongoose.model('Routes', favoriteRoutesSchema) 
 
-export { User }
+export { User, Routes }

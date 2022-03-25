@@ -10,6 +10,7 @@ const ticketSchema = new mongoose.Schema({
   time: {type: Date, required: true},
 }, {
   timestamps: true,
+})
     
 const favoriteRoutesSchema = new mongoose.Schema({
   routeName: String,

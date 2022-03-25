@@ -11,6 +11,11 @@ const lineSchema = new mongoose.Schema({
     LineCode2: String,
     LineCode3: String,
     LineCode4: String,
+    /* Wont need until geospatial features
+    Lat: Number,
+    Lon: Number,
+    */
+
 
 
   }]

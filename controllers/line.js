@@ -9,3 +9,7 @@ function index(req, res) {
       res.json(err)
     })
 }
+
+export {
+  index,
+}

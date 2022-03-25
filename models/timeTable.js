@@ -8,5 +8,5 @@ const timeTableSchema = Schema({
     firstTrain: Date,
     lastTrain: Date,
     startStation: String,
-    lastStation: String,
+    endStation: String,
 })

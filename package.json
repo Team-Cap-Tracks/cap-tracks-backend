@@ -14,5 +14,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
+

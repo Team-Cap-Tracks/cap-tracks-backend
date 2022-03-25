@@ -15,11 +15,11 @@ const lineSchema = new mongoose.Schema({
     Lat: Number,
     Lon: Number,
     */
-   Adress: [{
-     
+    Address: [{
+    Street: String,
+    City: String,
+    State: String,
+    Zip: String,
    }]
-
-
-
   }]
 })

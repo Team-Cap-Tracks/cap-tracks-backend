@@ -5,6 +5,9 @@ const lineSchema = new mongoose.Schema({
   stations: [{
     Code: String,
     Name: String,
+    StationTogether1: String,
+    StationTogether2: String,
+
 
   }]
 })

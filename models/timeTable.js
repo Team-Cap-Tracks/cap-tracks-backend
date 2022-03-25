@@ -12,3 +12,9 @@ const timeTableSchema = Schema({
 },{
   timestamp: true
 })
+
+const TimeTable = mongoose.model('TimeTable', timeTableSchema)
+
+export {
+  TimeTable
+}

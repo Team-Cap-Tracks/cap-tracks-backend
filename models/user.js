@@ -2,16 +2,19 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 const SALT_ROUNDS = 6
 
-const preferredRoutes = new mongoose.Schema({
+const favoriteRoutesSchema = new mongoose.Schema({
   routeName: String,
-  routeOwner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'}
+  routeOwner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},
+  startStation: String,
+  endStation: String,
 })
 
 const userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, required: true, lowercase: true, unique: true },
   password: String,
-  profile: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
+  profile: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
+  favoriteRoutes: [favoriteRoutesSchema]
 }, {
   timestamps: true,
 })
@@ -41,5 +44,6 @@ userSchema.methods.comparePassword = function (tryPassword, cb) {
 }
 
 const User = mongoose.model('User', userSchema)
+const Routes = mongoose.model('Routes', favoriteRoutesSchema)
 
-export { User }
+export { User, Routes }

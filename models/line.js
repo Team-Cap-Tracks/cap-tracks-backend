@@ -7,6 +7,10 @@ const lineSchema = new mongoose.Schema({
     Name: String,
     StationTogether1: String,
     StationTogether2: String,
+    LineCode1: String,
+    LineCode2: String,
+    LineCode3: String,
+    LineCode4: String,
 
 
   }]

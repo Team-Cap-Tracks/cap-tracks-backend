@@ -2,6 +2,11 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 const SALT_ROUNDS = 6
 
+const preferredRoutes = new mongoose.Schema({
+  routeName: String,
+  routeOwner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'}
+})
+
 const userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, required: true, lowercase: true, unique: true },

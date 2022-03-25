@@ -9,4 +9,6 @@ const timeTableSchema = Schema({
     lastTrain: Date,
     startStation: String,
     endStation: String,
+},{
+  timestamp: true
 })

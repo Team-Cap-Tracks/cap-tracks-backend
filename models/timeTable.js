@@ -3,8 +3,24 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const timeTableSchema = Schema({
-    line: { type: mongoose.Schema.Types.ObjectId, ref: "Line" },
-    dayOfWeek: String,
+    station: { type: String, ref: "Code" },
+    Monday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
     firstTrain: Date,
     lastTrain: Date,
     startStation: String,

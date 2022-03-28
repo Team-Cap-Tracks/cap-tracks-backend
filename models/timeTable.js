@@ -3,12 +3,126 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const timeTableSchema = Schema({
-    line: { type: mongoose.Schema.Types.ObjectId, ref: "Line" },
-    dayOfWeek: String,
-    firstTrain: Date,
-    lastTrain: Date,
-    startStation: String,
-    endStation: String,
+    station: { type: String, ref: "Code" },
+    Monday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Tuesday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Wednesday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Thursday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Friday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Saturday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
+    Sunday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
 },{
   timestamp: true
 })

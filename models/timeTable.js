@@ -72,6 +72,23 @@ const timeTableSchema = Schema({
       DestinationStation: String,
     }]
     }],
+    Friday: [{
+      OpeningTime: String,
+      FirstTrain: [{
+        Time: String,
+        DestinationStation: String
+      }, {
+      Time: String,
+      DestinationStation: String
+    }],
+    LastTrain: [{
+      Time: String,
+      DestinationStation: String,
+    }, {
+      Time: String,
+      DestinationStation: String,
+    }]
+    }],
 },{
   timestamp: true
 })

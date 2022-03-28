@@ -1,6 +1,6 @@
 import { TimeTable } from '../models/timeTable.js'
 
-function index() {
+function index(req, res) {
   TimeTable.find({})
     .then(line => {
       res.json(line)

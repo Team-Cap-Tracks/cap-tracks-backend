@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 const SALT_ROUNDS = 6
 
+// Created by Caleb
 const ticketSchema = new mongoose.Schema({
   ticketOwner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   fare: {type: Number, required: true},
@@ -11,7 +12,8 @@ const ticketSchema = new mongoose.Schema({
 }, {
   timestamps: true,
 })
-    
+
+// Created by Christine
 const favoriteRoutesSchema = new mongoose.Schema({
   routeName: String,
   routeOwner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},

@@ -1,128 +1,132 @@
-import mongoose from "mongoose"
+// Created by Cody
 
-const Schema = mongoose.Schema
+import mongoose from 'mongoose'
 
-const timeTableSchema = Schema({
-    station: { type: String, ref: "Code" },
-    Monday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+const timeTableSchema =  new mongoose.Schema({
+    station: { type: String, ref: 'Code' },
+    StationTimes: [{
+      Code: String,
+      StationName: String,
+      Monday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Tuesday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Tuesday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Wednesday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Wednesday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Thursday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Thursday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Friday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Friday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Saturday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Saturday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
-    }]
-    }],
-    Sunday: [{
-      OpeningTime: String,
-      FirstTrain: [{
+        Time: String,
+        DestinationStation: String,
+      }]
+      }],
+      Sunday: [{
+        OpeningTime: String,
+        FirstTrain: [{
+          Time: String,
+          DestinationStation: String
+        }, {
         Time: String,
         DestinationStation: String
+      }],
+      LastTrain: [{
+        Time: String,
+        DestinationStation: String,
       }, {
-      Time: String,
-      DestinationStation: String
-    }],
-    LastTrain: [{
-      Time: String,
-      DestinationStation: String,
-    }, {
-      Time: String,
-      DestinationStation: String,
+        Time: String,
+        DestinationStation: String,
+      }]
+      }]
     }]
-    }],
 },{
   timestamp: true
 })

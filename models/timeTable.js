@@ -1,8 +1,10 @@
+// Created by Cody
+
 import mongoose from "mongoose"
 
 const Schema = mongoose.Schema
 
-const timeTableSchema = Schema({
+const timeTableSchema =  new Schema({
     station: { type: String, ref: "Code" },
     Monday: [{
       OpeningTime: String,
@@ -122,7 +124,7 @@ const timeTableSchema = Schema({
       Time: String,
       DestinationStation: String,
     }]
-    }],
+    }]
 },{
   timestamp: true
 })

@@ -2,9 +2,7 @@
 
 import mongoose from "mongoose"
 
-const Schema = mongoose.Schema
-
-const timeTableSchema =  new Schema({
+const timeTableSchema =  new mongoose.Schema({
     station: { type: String, ref: "Code" },
     Monday: [{
       OpeningTime: String,

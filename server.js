@@ -19,7 +19,7 @@ app.use(express.json())
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/lines', linesRouter)
-app.use('/api/stationtimings', stationTimingsRouter)
+app.use('/api/timetables', stationTimingsRouter)
 
 app.use(function (req, res, next) {
   res.status(404).json({ err: "Not found" })

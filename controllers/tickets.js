@@ -23,7 +23,14 @@ function create(req, res) {
   .catch(err => res.json(err))
 }
 
+function deleteTicket(req, res) {
+  Ticket.findByIdAndDelete(req.params.id)
+  .then(ticket => res.json(ticket))
+  .catch(err => res.json(err))
+}
+
 export {
   index,
   create,
+  deleteTicket as delete,
 }

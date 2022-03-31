@@ -4,8 +4,8 @@ const SALT_ROUNDS = 6
 
 // Created by Caleb
 const ticketSchema = new mongoose.Schema({
-  ticketOwner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
-  startStation: {type: String, required: true},
+  owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
+  startStation: {type: String},
   
 }, {
   timestamps: true,

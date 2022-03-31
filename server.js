@@ -7,6 +7,7 @@ import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as linesRouter } from './routes/line.js'
 import { router as stationTimingsRouter } from './routes/stationTimings.js'
+import { router as ticketsRouter } from './routes/tickets.js'
 
 import('./config/database.js')
 

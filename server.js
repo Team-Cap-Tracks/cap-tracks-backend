@@ -10,7 +10,7 @@ import { router as stationTimingsRouter } from './routes/stationTimings.js'
 
 import('./config/database.js')
 
-const app = express()
+const app = express()  
 
 app.use(cors())
 app.use(logger('dev'))

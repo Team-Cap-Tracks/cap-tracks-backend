@@ -30,7 +30,9 @@ function deleteTicket(req, res) {
 }
 
 function updateTicket(req, res) {
-  
+  Ticket.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(ticket => res.json(ticket))
+  .catch(err => res.json(err))
 }
 
 

@@ -29,9 +29,14 @@ function deleteTicket(req, res) {
   .catch(err => res.json(err))
 }
 
+function updateTicket(req, res) {
+  
+}
+
 
 export {
   index,
   create,
+  updateTicket,
   deleteTicket as delete,
 }

@@ -4,11 +4,9 @@ const SALT_ROUNDS = 6
 
 // Created by Caleb
 const ticketSchema = new mongoose.Schema({
-  ticketOwner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
-  fare: {type: Number, required: true},
+  owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   startStation: {type: String, required: true},
-  endStation: {type: String, required: true},
-  time: {type: Date, required: true},
+  
 }, {
   timestamps: true,
 })
@@ -58,5 +56,6 @@ userSchema.methods.comparePassword = function (tryPassword, cb) {
 
 const User = mongoose.model('User', userSchema)
 const Routes = mongoose.model('Routes', favoriteRoutesSchema) 
+const Ticket = mongoose.model('Tickets', ticketSchema)
 
-export { User, Routes }
+export { User, Routes, Ticket }

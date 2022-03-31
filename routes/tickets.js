@@ -8,6 +8,7 @@ router.use(decodeUserFromToken)
 
 router.post('/', checkAuth, ticketsCtrl.create)
 router.delete('/:id', checkAuth, ticketsCtrl.delete)
+router.put('/:id', checkAuth, ticketsCtrl.update)
 
 export {
   router

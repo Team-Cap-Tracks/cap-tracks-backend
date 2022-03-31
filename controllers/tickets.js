@@ -12,7 +12,15 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  
+  req.body.owner = req.user.profile
+  Ticket.create(req.body)
+  .then(ticket => {
+    ticket.populate('owner')
+    .then(populatedTicket => {
+      res.json(populatedTicket)
+    })
+  })
+  .catch(err => res.json(err))
 }
 
 export {

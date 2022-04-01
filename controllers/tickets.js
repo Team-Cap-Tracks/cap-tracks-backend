@@ -19,7 +19,7 @@ function create(req, res) {
     .then(populatedTicket => {
       res.json(populatedTicket)
     })
-  })
+  }) 
   .catch(err => res.json(err))
 }
 

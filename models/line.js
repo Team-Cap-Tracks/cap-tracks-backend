@@ -23,6 +23,8 @@ const lineSchema = new mongoose.Schema({
     Zip: String,
     }]
   }]
+},{
+  timestamp: true
 })
 
 const Line = mongoose.model("Line", lineSchema)

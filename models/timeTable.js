@@ -1,5 +1,4 @@
 // Created by Cody
-
 import mongoose from 'mongoose'
 
 const timeTableSchema =  new mongoose.Schema({

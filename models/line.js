@@ -1,5 +1,4 @@
 // Created by Marcus
-
 import mongoose from "mongoose"
 
 const lineSchema = new mongoose.Schema({
@@ -28,6 +27,6 @@ const lineSchema = new mongoose.Schema({
 
 const Line = mongoose.model("Line", lineSchema)
 
-export{
+export {
   Line
 }
